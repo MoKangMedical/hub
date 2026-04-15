@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://mokangmedical.github.io/hub/sitemap.xml
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /

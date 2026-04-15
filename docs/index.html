@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoKangMedical — Medical AI Agent Ecosystem</title>
+<meta name="description" content="Open-source medical AI agent ecosystem: orchestration frameworks, diagnostic tools, drug discovery, and healthcare management platforms by MoKangMedical.">
+<meta name="keywords" content="medical AI, drug discovery, rare disease, digital health, AI agent, healthcare, MIMO, OpenClaw">
+<meta property="og:title" content="MoKangMedical — Medical AI Agent Ecosystem">
+<meta property="og:description" content="17 open-source repos for medical AI: diagnosis, drug discovery, health management, memorial AI, population simulation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mokangmedical.github.io/">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mokangmedical.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MoKangMedical",
+  "url": "https://github.com/MoKangMedical",
+  "description": "Open-source medical AI agent ecosystem",
+  "sameAs": ["https://github.com/MoKangMedical"],
+  "member": [
+    {"@type": "SoftwareApplication", "name": "OpenClaw Medical Harness", "url": "https://mokangmedical.github.io/openclaw-medical-harness/"},
+    {"@type": "SoftwareApplication", "name": "ChroniCare OS", "url": "https://mokangmedical.github.io/chronicdiseasemanagement/"},
+    {"@type": "SoftwareApplication", "name": "Cloud Memorial", "url": "https://mokangmedical.github.io/cloud-memorial/"},
+    {"@type": "SoftwareApplication", "name": "Digital Sage", "url": "https://mokangmedical.github.io/digital-sage/"},
+    {"@type": "SoftwareApplication", "name": "MediChat-RD", "url": "https://mokangmedical.github.io/medichat-rd/"},
+    {"@type": "SoftwareApplication", "name": "DrugMind", "url": "https://mokangmedical.github.io/drugmind/"},
+    {"@type": "SoftwareApplication", "name": "MediPharma", "url": "https://mokangmedical.github.io/medi-pharma/"},
+    {"@type": "SoftwareApplication", "name": "TianYan", "url": "https://mokangmedical.github.io/tianyan/"}
+  ]
+}
+</script>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--accent:#58a6ff;--text:#c9d1d9;--text2:#8b949e;--green:#3fb950;--orange:#d29922;--purple:#bc8cff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+
+.hero{text-align:center;padding:5rem 2rem 3rem;background:linear-gradient(135deg,#0d1117 0%,#161b22 50%,#1a1f36 100%)}
+.hero h1{font-size:3rem;margin-bottom:.5rem;background:linear-gradient(120deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .tagline{font-size:1.3rem;color:var(--text2);max-width:700px;margin:0 auto}
+.hero .badges{margin-top:1.5rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .8rem;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:.85rem;color:var(--text)}
+.badge .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot-green{background:var(--green)}.dot-orange{background:var(--orange)}.dot-purple{background:var(--purple)}
+
+.section{max-width:1100px;margin:0 auto;padding:3rem 1.5rem}
+.section h2{font-size:1.8rem;margin-bottom:1.5rem;text-align:center}
+.section h2 span{color:var(--accent)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.card h3{font-size:1.15rem;margin-bottom:.3rem}
+.card .sub{color:var(--text2);font-size:.9rem;margin-bottom:.8rem}
+.card .desc{font-size:.92rem;color:var(--text);margin-bottom:1rem}
+.card .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{font-size:.75rem;padding:.15rem .5rem;border-radius:8px;background:#21262d;color:var(--text2)}
+.card .links{margin-top:.8rem;display:flex;gap:.6rem}
+.card .links a{font-size:.82rem;padding:.25rem .6rem;border-radius:6px;border:1px solid var(--border)}
+
+.terminal{background:#1c2128;border:1px solid var(--border);border-radius:8px;padding:1.2rem;font-family:'SF Mono',Consolas,monospace;font-size:.9rem;color:var(--green);overflow-x:auto;white-space:pre}
+
+.features{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:2rem 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.2rem;text-align:center}
+.feature .icon{font-size:2rem;margin-bottom:.5rem}
+.feature h4{margin-bottom:.3rem}.feature p{font-size:.85rem;color:var(--text2)}
+
+footer{text-align:center;padding:2rem;color:var(--text2);font-size:.85rem;border-top:1px solid var(--border)}
+footer a{margin:0 .5rem}
+
+@media(max-width:640px){.hero h1{font-size:2rem}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>MoKangMedical</h1>
+  <p class="tagline">Open-Source Medical AI Agent Ecosystem<br>从诊断到药物发现，从健康管理到数字永生</p>
+  <div class="badges">
+    <span class="badge"><span class="dot dot-green"></span>17 Repositories</span>
+    <span class="badge"><span class="dot dot-orange"></span>67 Skills</span>
+    <span class="badge"><span class="dot dot-purple"></span>MIMO-Powered</span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🏥 <span>Core Framework</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/openclaw-medical-harness/">OpenClaw Medical Harness</a></h3>
+      <p class="sub">Medical AI Agent Orchestration Framework</p>
+      <p class="desc">基于 Harness Theory 的医学 AI Agent 编排框架。5步流水线：工具链 → 上下文管理 → 模型推理 → 验证 → 恢复。集成 PubMed、ChEMBL、OpenTargets、OMIM、RDKit。</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">MCP</span><span class="tag">PyPI</span><span class="tag">OpenClaw</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/MoKangMedical/openclaw-medical-harness">GitHub</a>
+        <a href="https://pypi.org/project/openclaw-medical-harness/">PyPI</a>
+        <a href="https://mokangmedical.github.io/openclaw-medical-harness/">Docs</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🧠 <span>Diagnosis & Clinical</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/medichat-rd/">MediChat-RD</a></h3>
+      <p class="sub">多Agent医疗诊断 — 罕见病专版</p>
+      <p class="desc">CrewAI 驱动的 4Agent 协作诊断：诊断/文献/沟通/伦理。集成 MG、SCA、LPD 罕见病知识库。</p>
+      <div class="tags"><span class="tag">CrewAI</span><span class="tag">Rare Disease</span><span class="tag">PubMed</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/medichat-rd">GitHub</a><a href="https://mokangmedical.github.io/medichat-rd/">Docs</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/chronicdiseasemanagement/">慢康智枢 ChroniCare OS</a></h3>
+      <p class="sub">医院慢性病管理平台</p>
+      <p class="desc">HIS/LIS/PACS 集成，4级风险分层，智能随访，效果评估。糖尿病/高血压/CKD/COPD 全覆盖。</p>
+      <div class="tags"><span class="tag">HIS</span><span class="tag">NPCDR</span><span class="tag">随访</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/chronicdiseasemanagement">GitHub</a><a href="https://mokangmedical.github.io/chronicdiseasemanagement/">Docs</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/medroundtable/">医疗圆桌</a></h3>
+      <p class="sub">Multi-Agent Medical Roundtable</p>
+      <p class="desc">多学科会诊平台，各专科 Agent 模拟真实 MDT 讨论。</p>
+      <div class="tags"><span class="tag">MDT</span><span class="tag">Multi-Agent</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/medroundtable">GitHub</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>💊 <span>Drug Discovery</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/medi-pharma/">MediPharma</a></h3>
+      <p class="sub">AI-Driven Drug Discovery Platform</p>
+      <p class="desc">靶点发现 → 先导化合物优化 → ADMET 预测。集成 ChEMBL 2.4M+、OpenTargets、UniProt。</p>
+      <div class="tags"><span class="tag">ChEMBL</span><span class="tag">ADMET</span><span class="tag">RDKit</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/medi-pharma">GitHub</a><a href="https://mokangmedical.github.io/medi-pharma/">Docs</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/drugmind/">DrugMind</a></h3>
+      <p class="sub">药物研发数字孪生协作平台</p>
+      <p class="desc">药企团队的 Second Me。靶点→化合物→临床→RWD 全链路，多角色协作。</p>
+      <div class="tags"><span class="tag">Digital Twin</span><span class="tag">Pharma</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/drugmind">GitHub</a><a href="https://mokangmedical.github.io/drugmind/">Docs</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/MoKangMedical/PharmaSim">PharmaSim</a></h3>
+      <p class="sub">药物研发生命周期模拟</p>
+      <p class="desc">Pharma lifecycle simulation from bench to market.</p>
+      <div class="tags"><span class="tag">Simulation</span><span class="tag">Lifecycle</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/PharmaSim">GitHub</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🤖 <span>AI Dialog & Knowledge</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/digital-sage/">数字智者 Digital Sage</a></h3>
+      <p class="sub">100+历史人物 AI 对话</p>
+      <p class="desc">与苏格拉底辩论、与爱因斯坦探讨、与芒格学投资、与孔子论仁义。</p>
+      <div class="tags"><span class="tag">Philosophy</span><span class="tag">Education</span><span class="tag">100+</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/digital-sage">GitHub</a><a href="https://mokangmedical.github.io/digital-sage/">Docs</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/cloud-memorial/">云思园</a></h3>
+      <p class="sub">AI 思念亲人平台</p>
+      <p class="desc">基于文字/语音/照片训练数字人格。语音通话、文字聊天、虚拟祭扫。隐私优先架构。</p>
+      <div class="tags"><span class="tag">Voice</span><span class="tag">Privacy</span><span class="tag">Memorial</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/cloud-memorial">GitHub</a><a href="https://mokangmedical.github.io/cloud-memorial/">Docs</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/ponder-knowledge-platform/">知识平台</a></h3>
+      <p class="sub">Medical Knowledge Platform</p>
+      <p class="desc">医疗知识沉淀与检索系统。</p>
+      <div class="tags"><span class="tag">Knowledge</span><span class="tag">Search</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/ponder-knowledge-platform">GitHub</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📊 <span>Business & Analytics</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://mokangmedical.github.io/tianyan/">天眼 TianYan</a></h3>
+      <p class="sub">Multi-Agent 人群模拟商业预测</p>
+      <p class="desc">10万+ 虚拟消费者，市场趋势预测，产品上市评估。中国版 Aaru。</p>
+      <div class="tags"><span class="tag">Simulation</span><span class="tag">Market</span><span class="tag">Forecasting</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/tianyan">GitHub</a><a href="https://mokangmedical.github.io/tianyan/">Docs</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/MoKangMedical/Biostats">Biostats</a></h3>
+      <p class="sub">Biostatistics Toolkit</p>
+      <p class="desc">生物统计分析工具包，支持临床试验统计设计与分析。</p>
+      <div class="tags"><span class="tag">Biostatistics</span><span class="tag">Clinical Trial</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/Biostats">GitHub</a></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/MoKangMedical/heor-modeling-platform">HEOR Modeling Platform</a></h3>
+      <p class="sub">Health Economics & Outcomes Research</p>
+      <p class="desc">卫生经济学建模平台，成本效益分析，Markov模型。</p>
+      <div class="tags"><span class="tag">HEOR</span><span class="tag">Markov</span></div>
+      <div class="links"><a href="https://github.com/MoKangMedical/heor-modeling-platform">GitHub</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🚀 <span>Quick Start</span></h2>
+  <div class="terminal"># Install the core framework
+pip install openclaw-medical-harness
+
+# Run a diagnosis
+python -c "
+from openclaw_medical_harness import DiagnosisHarness
+h = DiagnosisHarness(specialty='neurology')
+r = h.execute({'symptoms': ['ptosis', 'fatigable weakness'], 'patient': {'age': 35}})
+print(r['diagnosis'], r['confidence'])
+"
+
+# Or launch the demo server
+pip install "openclaw-medical-harness[server]"
+MIMO_API_KEY=sk-xxx python demo_server.py</div>
+</div>
+
+<div class="section">
+  <h2>🔗 <span>More Projects</span></h2>
+  <div class="features">
+    <div class="feature"><div class="icon">🔬</div><h4>Virtual Cell</h4><p>单细胞基础模型 Benchmark</p></div>
+    <div class="feature"><div class="icon">💊</div><h4>MediSlim</h4><p>中国版 MedVi 消费医疗</p></div>
+    <div class="feature"><div class="icon">📋</div><h4>Minder</h4><p>临床决策辅助</p></div>
+    <div class="feature"><div class="icon">🔍</div><h4>MingEvidence</h4><p>循证医学工具</p></div>
+  </div>
+</div>
+
+<footer>
+  <p>MoKangMedical — Building the medical AI ecosystem, one agent at a time.</p>
+  <p>
+    <a href="https://github.com/MoKangMedical">GitHub</a>
+    <a href="https://mokangmedical.github.io/openclaw-medical-harness/">Harness Docs</a>
+    <a href="https://pypi.org/project/openclaw-medical-harness/">PyPI</a>
+  </p>
+  <p style="margin-top:.5rem">All projects MIT Licensed · Made with ❤️ and AI</p>
+</footer>
+
+</body>
+</html>
